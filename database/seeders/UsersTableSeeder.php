@@ -40,6 +40,29 @@ class UsersTableSeeder extends Seeder
         ]);
 
         User::create([
+            'name' => 'Victor paciente',
+            'email' => 'paciente1@gmail.com',
+            'email_verified_at' => now(),
+            'password' => bcrypt('paciente123'),
+            'remember_token' => Str::random(10),
+            'address' => 'Quito',
+            'phone' => '',
+            'dni' => '',
+            'role' => 'patient'
+        ]);
+        
+        User::create([
+            'name' => 'Victor Daniel paciente',
+            'email' => 'paciente2@gmail.com',
+            'email_verified_at' => now(),
+            'password' => bcrypt('paciente123'),
+            'remember_token' => Str::random(10),
+            'address' => 'Quito',
+            'phone' => '',
+            'dni' => '',
+            'role' => 'patient'
+        ]);
+        User::create([
             'name' => 'Daniel doctor',
             'email' => 'doctor@gmail.com',
             'email_verified_at' => now(),

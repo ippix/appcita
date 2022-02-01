@@ -54,6 +54,9 @@ Route::middleware(['auth','admin'])->group(function(){
 		Route::get('/charts/doctors/column', [App\Http\Controllers\Admin\ChartController::class,'doctors']);
 		Route::get('/charts/doctors/column/data', [App\Http\Controllers\Admin\ChartController::class,'doctorsJson']);
 		//charts/doctors/column/data
+
+		/*Crud Medicinas*/
+		Route::resource('medicines',App\Http\Controllers\Admin\MedicineController::class); 
 });
 
 
@@ -61,8 +64,9 @@ Route::middleware(['auth','doctor'])->group(function(){
 		Route::get('/schedule',[App\Http\Controllers\Doctor\ScheduleController::class,'edit']);
 		Route::post('/schedule',[App\Http\Controllers\Doctor\ScheduleController::class,'store']);
 
-		Route::get('/paciente',[App\Http\Controllers\Doctor\PacienteController::class,'index']);
+		Route::get('/pacientedoctor',[App\Http\Controllers\Doctor\PacienteController::class,'index']); 
 });
+
 
 Route::middleware('auth')->group(function () {
 

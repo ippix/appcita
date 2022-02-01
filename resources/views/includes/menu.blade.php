@@ -6,7 +6,13 @@
 
           <li class="nav-item">
             <a class="nav-link" href="{{ route('home') }}">
-              <i class="ni ni-tv-2 text-primary"></i> Dashboard
+              <i class="ni ni-tv-2 text-primary"></i> Menu
+            </a>
+          </li>
+
+                <li class="nav-item">
+            <a class="nav-link" href="{{ url('/administrador') }}">
+              <i class="ni ni-money-coins"></i> Gestion de Admins
             </a>
           </li>
 
@@ -27,11 +33,7 @@
             </a>
           </li>
 
-           <li class="nav-item">
-            <a class="nav-link" href="{{ url('/administrador') }}">
-              <i class="ni ni-money-coins"></i> Gestion de Admins
-            </a>
-          </li>
+     
           
           <li class="nav-item">
             <a class="nav-link" href="{{ url('/appointments') }}">
@@ -53,6 +55,13 @@
             </a>
           </li> --}}
 
+ <li class="nav-item">
+            <a class="nav-link" href="{{ url('/medicines') }}">
+              <i class="ni ni-calendar-grid-58 text-danger"></i> Gestor de Medicamentos
+            </a>
+          </li>
+
+
           @elseif(auth()->user()->role == "doctor") {{-- doctor--}}
            <li class="nav-item">
             <a class="nav-link" href="{{ url('/schedule') }}">
@@ -60,7 +69,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('/paciente') }}">
+            <a class="nav-link" href="{{ url('/pacientedoctor') }}">
               <i class="ni ni-time-alarm text-blue"></i> Mis Pacientes
             </a>
           </li>

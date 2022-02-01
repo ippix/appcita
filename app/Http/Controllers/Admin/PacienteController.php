@@ -12,7 +12,7 @@ class PacienteController extends Controller
     /** INDEX */
     public function index()
     { 
-        $paciente=User::Patients()->paginate(3);
+        $paciente=User::Patients()->paginate(5);
      return view('paciente.index',compact('paciente'));
     }
  

@@ -1,8 +1,8 @@
 @extends('layouts.panel')
 
-@section('title','Paciente')
+@section('title','Medicina')
 
-@section('subtitle','Paciente')
+@section('subtitle','medicinas')
 
 @section('content')
 
@@ -18,7 +18,7 @@
             <div class="card-header border-0">
               <div class="row align-items-center">
                 <div class="col">
-                  <h3 class="mb-0 btnagregar">Paciente  <a href="{{ url('paciente/create')}}" class="btn btn-sm btn-success"><i class="fas fa-plus-circle " ></i> Agregar</a></h3>
+                  <h3 class="mb-0 btnagregar">Medicina  <a href="{{ url('medicines/create')}}" class="btn btn-sm btn-success"><i class="fas fa-plus-circle " ></i> Agregar</a></h3>
                    
                 </div>
               </div>
@@ -40,30 +40,37 @@
                 <thead class="thead-light">
                   <tr>
                     <th scope="col">Nombre</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">DNI</th>
+                    <th scope="col">Descripcion</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Stock</th>
                     <th scope="col">Opciones</th>
                   </tr>
                 </thead>
                 <tbody>
-                @foreach ($paciente as $pac)
+                @foreach ($medicine as $med)
                <tr>
                     <th scope="row">
-                      {{ $pac->name }}
+                      {{ $med->title }}
                     </th>
                     <td>
-                     {{ $pac->email }}
+                     {{ $med->description }}
                     </td>
 
                      <td>
-                      {{ $pac->dni }}
+                      {{ $med->precio }}
                     </td>
                     
+                     <td>
+                      {{ $med->stock}}
+                    </td>
+                     
+                   
+
                     <td>                   
-                        <form action="{{ url('/paciente/'.$pac->id) }}" method="post">
+                        <form action="{{ url('/medicines/'.$med->id) }}" method="post">
                           @csrf
                           @method('DELETE')
-                          <a href="{{ url('/paciente/'.$pac->id.'/edit') }}" class="btn btn-sm btn-primary">Editar</a>
+                          <a href="{{ url('/medicines/'.$med->id.'/edit') }}" class="btn btn-sm btn-primary">Editar</a>
                           <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
                         </form>
                      
@@ -75,7 +82,7 @@
 
               
               <!-- PAGINACION -->
-   {{ $paciente->links() }}
+   {{ $medicine->links() }}
 
 
 
