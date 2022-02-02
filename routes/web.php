@@ -57,6 +57,12 @@ Route::middleware(['auth','admin'])->group(function(){
 
 		/*Crud Medicinas*/
 		Route::resource('medicines',App\Http\Controllers\Admin\MedicineController::class); 
+
+          /*Crud Examenes*/
+       Route::resource('exams',App\Http\Controllers\Admin\ExamController::class); 
+
+
+
 });
 
 
@@ -65,6 +71,9 @@ Route::middleware(['auth','doctor'])->group(function(){
 		Route::post('/schedule',[App\Http\Controllers\Doctor\ScheduleController::class,'store']);
 
 		Route::get('/pacientedoctor',[App\Http\Controllers\Doctor\PacienteController::class,'index']); 
+
+
+
 });
 
 

@@ -8,6 +8,8 @@
 
 <div class="header bg-gradient-primary pb-6 pt-3 pt-md-6">
      
+
+     
     </div>
     
     <div class="container-fluid mt--7">
@@ -18,6 +20,41 @@
             <div class="card-header border-0">
               <div class="row align-items-center">
                 <div class="col">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  <li class="nav-item">
+            <a class="nav-link" href="{{ url('/medicines') }}">
+              <i class="ni ni-calendar-grid-58 text-danger"></i> Gestor de Medicamentos
+            </a>
+          </li> 
+          
+          
+
+
+
+
+
+
+
+
+
+
+
+
                   <h3 class="mb-0 btnagregar">Mis Paciente </h3>
                    
                 </div>

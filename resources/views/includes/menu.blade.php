@@ -57,7 +57,13 @@
 
  <li class="nav-item">
             <a class="nav-link" href="{{ url('/medicines') }}">
-              <i class="ni ni-calendar-grid-58 text-danger"></i> Gestor de Medicamentos
+              <i class="ni ni-calendar-grid-58 text-danger"></i> Catalogo de Medicamentos
+            </a>
+          </li>
+          
+              <li class="nav-item">
+            <a class="nav-link" href="{{ url('/exams') }}">
+              <i class="ni ni-time-alarm text-yellow"></i> Catalogo de Examenes
             </a>
           </li>
 
@@ -73,12 +79,25 @@
               <i class="ni ni-time-alarm text-blue"></i> Mis Pacientes
             </a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" href="{{ url('/appointments') }}">
               <i class="ni ni-satisfied text-yellow"></i> Mis Citas
             </a>
           </li>
         
+<li class="nav-item">
+            <a class="nav-link" href="{{ url('/medicines') }}">
+              <i class="ni ni-calendar-grid-58 text-danger"></i> Catalogo de Medicamentos
+            </a>
+          </li>
+
+             <li class="nav-item">
+            <a class="nav-link" href="{{ url('/exams') }}">
+              <i class="ni ni-time-alarm text-yellow"></i> Catalogo de Examenes
+            </a>
+          </li>
+          
          @else {{-- patient--}}
           <li class="nav-item">
             <a class="nav-link" href="{{ url('/appointments/create') }}">
@@ -91,6 +110,10 @@
               <i class="ni ni-time-alarm text-yellow"></i> Mis Citas
             </a>
           </li>
+
+        
+          
+
           @endif
 
 

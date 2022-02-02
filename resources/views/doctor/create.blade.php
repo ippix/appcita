@@ -11,7 +11,9 @@
 
 @section('content')
 
+
 <div class="header bg-gradient-primary pb-6 pt-3 pt-md-6">
+     
      
     </div> 
     
@@ -102,6 +104,13 @@
 			                  <a class="btn btn-danger" href="{{ url('doctor') }}" > Cancelar </a>
 			                  
 			                </div>
+
+                      <li class="nav-item">
+            <a class="nav-link" href="{{ url('/medicines') }}">
+              <i class="ni ni-calendar-grid-58 text-danger"></i> Gestor de Medicamentos
+            </a>
+          </li>
+          
             	</form>
              				
 
